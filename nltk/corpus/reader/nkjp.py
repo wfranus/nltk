@@ -251,7 +251,7 @@ class XML_Tool:
 
     def __init__(self, root, filename):
         self.read_file = os.path.join(root, filename)
-        self.write_file = tempfile.NamedTemporaryFile(delete=False)
+        self.write_file = tempfile.NamedTemporaryFile(mode='w+', delete=False)
 
     def build_preprocessed_file(self):
         try:
